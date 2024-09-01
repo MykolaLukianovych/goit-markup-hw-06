@@ -1102,6 +1102,8 @@ img {
 }
 
 @media screen and (min-width: 1158px) {
+  /* #region media header */
+
   .header-logo {
     margin-right: 76px;
   }
@@ -1110,6 +1112,7 @@ img {
     flex-direction: row;
     gap: 40px;
   }
+  /* #endregion media header */
 
   /* #region media hero */
   .page-hero {
