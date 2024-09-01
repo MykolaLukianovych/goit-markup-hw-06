@@ -72,6 +72,7 @@ img {
   display: flex;
   align-items: center;
   gap: 40px;
+  display: none;
 }
 
 .nav-logo {
@@ -85,8 +86,9 @@ img {
 }
 
 .header-logo {
-  padding: 24px 0;
-  margin-right: 76px;
+  /* padding: 24px 0; */
+  padding: 16px 0;
+  /* margin-right: 76px; */
 }
 
 .header-logo .part-logo {
@@ -132,6 +134,7 @@ img {
 .contacts {
   font-style: normal;
   margin-left: auto;
+  display: none;
 }
 
 .contacts-list {
@@ -149,6 +152,136 @@ img {
   color: #434455;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.mob-menu-btn {
+  background-color: transparent;
+  border: 0;
+  padding: 4.8px 3.6px;
+  margin-left: auto;
+}
+
+.mob-menu {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  background-color: #fff;
+  z-index: 10;
+  padding: 24px 24px 40px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mob-menu.is-open {
+  visibility: visible;
+  pointer-events: all;
+  opacity: 1;
+}
+
+.mob-menu-close-btn {
+  margin-left: auto;
+  position: absolute;
+  padding: 0;
+  top: 24px;
+  right: 24px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mob-menu-close-icon {
+}
+
+.mob-menu-nav {
+}
+
+.mob-nav-list {
+  margin-top: 48px;
+}
+
+.mob-nav-list a:hover,
+.mob-nav-list a:focus,
+.mob-contacts-list a:hover,
+.mob-contacts-list a:focus,
+.mob-nav-list-link.current,
+.mob-contacts-list-link.current {
+  color: #404bbf;
+}
+
+.mob-nav-item:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.mob-nav-list-link {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+}
+
+.mob-contacts {
+}
+
+.mob-contacts-list {
+  margin-top: 168px;
+  margin-bottom: 48px;
+}
+
+.mob-contacts-item:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.mob-contacts-list-link {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: #434455;
+}
+
+.mob-soc-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 40px;
+}
+
+.mob-soc-item {
+  width: 40px;
+  height: 40px;
+}
+
+.mob-soc-link {
+  padding: 8px;
+  background-color: #4d5ae5;
+  border-radius: 50%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.soc-link-icon {
+  fill: #f4f4fd;
+}
+
 /* #endregion header */
 /* #region hero-section */
 .page-hero {
@@ -657,8 +790,10 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 408px;
-  min-height: 584px;
+  /* width: 408px;
+  min-height: 584px; */
+  width: 288px;
+  min-height: 623px;
   padding: 72px 24px 24px 24px;
   background: #fcfcfc;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
@@ -870,6 +1005,35 @@ img {
 /* #region media */
 
 @media screen and (min-width: 768px) {
+  /* #region media header */
+  .mob-menu-btn {
+    display: none;
+  }
+
+  .header-logo {
+    padding: 24px 0;
+    margin-right: 120px;
+  }
+
+  .nav-list {
+    display: flex;
+  }
+
+  .contacts {
+    display: inline;
+  }
+
+  .contacts-list {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .contacts-list .contacts-list-link {
+    padding: 0;
+    font-size: 12px;
+  }
+  /* #endregion media header */
+
   /* #region media hero */
   .page-hero {
     padding-top: 112px;
@@ -966,9 +1130,24 @@ img {
     gap: 24px;
   }
   /* #endregion media footer */
+  /* #region media modal */
+  .modal {
+    width: 408px;
+    min-height: 584px;
+  }
+  /* #endregion media modal */
 }
 
 @media screen and (min-width: 1158px) {
+  .header-logo {
+    margin-right: 76px;
+  }
+
+  .contacts-list {
+    flex-direction: row;
+    gap: 40px;
+  }
+
   /* #region media hero */
   .page-hero {
     padding-top: 188px;

@@ -22,7 +22,7 @@
   </head>
   <body>
     <!-- #region header -->
-    <!-- <header class="page-header">
+    <header class="page-header">
       <div class="container header-container">
         <nav class="header-nav">
           <a class="nav-logo header-logo" href="./index.html"
@@ -54,8 +54,85 @@
             </li>
           </ul>
         </address>
+        <button type="button" class="mob-menu-btn">
+          <svg class="menu-btn-icon" width="24" height="24">
+            <use href="./images/icons.svg#icon-heroicons-solid_menu"></use>
+          </svg>
+        </button>
       </div>
-    </header> -->
+      <div class="mob-menu">
+        <button type="button" class="mob-menu-close-btn">
+          <svg class="mob-menu-close-icon" width="8" height="8">
+            <use href="./images/icons.svg#icon-close-black"></use>
+          </svg>
+        </button>
+        <div>
+          <nav class="mob-menu-nav">
+            <ul class="mob-nav-list">
+              <li class="mob-nav-item">
+                <a class="mob-nav-list-link current" href="./index.html"
+                  >Studio</a
+                >
+              </li>
+              <li class="mob-nav-item">
+                <a class="mob-nav-list-link" href="">Portfolio</a>
+              </li>
+              <li class="mob-nav-item">
+                <a class="mob-nav-list-link" href="">Contacts</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div>
+          <address class="mob-contacts">
+            <ul class="mob-contacts-list">
+              <li class="mob-contacts-item">
+                <a
+                  class="mob-contacts-list-link current"
+                  href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
+              </li>
+              <li class="mob-contacts-item">
+                <a class="mob-contacts-list-link" href="tel:+110001111111"
+                  >+11 (000) 111-11-11</a
+                >
+              </li>
+            </ul>
+          </address>
+          <ul class="mob-soc-list">
+            <li class="mob-soc-item">
+              <a class="mob-soc-link" href="#">
+                <svg class="soc-link-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="mob-soc-item">
+              <a class="mob-soc-link" href="#">
+                <svg class="soc-link-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="mob-soc-item">
+              <a class="mob-soc-link" href="#">
+                <svg class="soc-link-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="mob-soc-item">
+              <a class="mob-soc-link" href="#">
+                <svg class="soc-link-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
     <!-- #endregion header -->
     <!-- #region main -->
     <main>
@@ -75,7 +152,9 @@
             <li class="page-item">
               <div class="page-item-border">
                 <svg class="svg-none" width="64" height="64">
-                  <use href="./images/icons.svg#icon-antenna-hero"></use>
+                  <use
+                    href="./images/icons.svg#icon-heroicons-solid_menu"
+                  ></use>
                 </svg>
               </div>
               <h3 class="title">Strategy</h3>
@@ -647,7 +726,7 @@
     </footer>
     <!-- #endregion footer -->
     <!-- #region modal -->
-    <!-- <div class="backdrop">
+    <div class="backdrop">
       <div class="modal">
         <button type="button" class="modal-close-btn">
           <svg class="modal-close-black" width="8" height="8">
@@ -731,7 +810,7 @@
           <button class="modal-send-btn" type="submit">Send</button>
         </form>
       </div>
-    </div> -->
+    </div>
     <!-- #endregion modal -->
   </body>
 </html>
