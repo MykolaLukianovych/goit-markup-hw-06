@@ -440,17 +440,25 @@ img {
 
 .page-footer {
   background: #2e2f42;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  /* padding-top: 100px;
+  padding-bottom: 100px; */
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 
 .footer-con {
   display: flex;
-  align-items: baseline;
+  flex-wrap: wrap;
+  align-items: center;
+  /* align-items: baseline; */
 }
 
 .logo-container {
-  margin-right: 120px;
+  /* margin-right: 120px; */
+  text-align: center;
+  margin-bottom: 72px;
+  width: 288px;
+  height: 112px;
 }
 
 .footer-logo .part-logo {
@@ -463,17 +471,22 @@ img {
 }
 
 .footer-text {
-  max-width: 264px;
+  /* max-width: 264px; */
+  max-width: 288px;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #f4f4fd;
+  text-align: start;
 }
 
 .foot-social-media {
   width: 208px;
   height: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 72px;
 }
 
 .foot-media-title {
@@ -483,6 +496,7 @@ img {
   letter-spacing: 0.02em;
   color: #fff;
   margin-bottom: 16px;
+  text-align: center;
 }
 
 .foot-media-icons-list {
@@ -519,7 +533,10 @@ img {
 
 .subscribe-wrapper {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 .sub-wrap-button {
   display: flex;
@@ -541,6 +558,8 @@ img {
   border: none;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .sub-wrap-button:hover,
@@ -555,13 +574,13 @@ img {
   letter-spacing: 0.02em;
   color: #fff;
   margin-bottom: 16px;
-  margin-left: 80px;
+  /* margin-left: 80px; */
 }
 
 .sub-wrap-input {
   border: 1px solid #fff;
   border-radius: 4px;
-  width: 264px;
+  /* width: 264px; */
   height: 40px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   background-color: transparent;
@@ -571,8 +590,9 @@ img {
   letter-spacing: 0.04em;
   color: #fff;
   padding-left: 16px;
-  margin-right: 24px;
-  margin-left: 80px;
+  width: 288px;
+  /* margin-right: 24px; */
+  /* margin-left: 80px; */
 }
 
 .sub-wrap-input + ::placeholder {
@@ -581,7 +601,14 @@ img {
 
 .sub-con {
   display: flex;
-  gap: 24px;
+  flex-wrap: wrap;
+  /* gap: 24px; */
+}
+
+.sub-form-label {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 16px;
 }
 
 .sub-button-icon {
@@ -849,7 +876,7 @@ img {
     column-gap: 24px;
   }
   /* #endregion media section 2 */
-
+  /* #region media portfolio */
   .portfolio-list {
     gap: 72px 24px;
   }
@@ -862,6 +889,33 @@ img {
   .portfolio-card-info {
     width: 356px;
   }
+  /* #endregion media portfolio */
+  /* #region media footer */
+  .footer-con {
+    align-items: baseline;
+  }
+
+  .logo-container {
+    margin-left: 108px;
+    margin-right: 24px;
+    max-width: 264px;
+    text-align: start;
+  }
+
+  .foot-social-media {
+    margin-left: 0;
+  }
+
+  .subscribe-wrapper {
+    flex-direction: column;
+    align-items: start;
+    margin-left: 108px;
+  }
+
+  .sub-con {
+    gap: 24px;
+  }
+  /* #endregion media footer */
 }
 
 @media screen and (min-width: 1158px) {
@@ -915,7 +969,7 @@ img {
     gap: 24px;
   }
   /* #endregion media section 2 */
-
+  /* #region media portfolio */
   .portfolio-list {
     gap: 48px 24px;
   }
@@ -929,5 +983,63 @@ img {
     width: 360px;
     height: 120px;
   }
+  /* #endregion media portfolio */
+  /* #region media footer */
+  .page-footer {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .footer-con {
+    flex-wrap: nowrap;
+  }
+
+  .logo-container {
+    margin-right: 120px;
+    margin-left: 0;
+    margin-bottom: 0;
+    min-width: 264px;
+  }
+
+  .footer-text {
+    max-width: 264px;
+  }
+
+  .foot-social-media {
+    margin: 0;
+  }
+
+  .foot-media-title {
+    text-align: start;
+  }
+
+  .subscribe-wrapper {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    margin-left: 0;
+  }
+
+  .sub-wrap-button {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .sub-wrap-text {
+    margin-left: 80px;
+  }
+
+  .sub-wrap-input {
+    width: 264px;
+    margin-left: 80px;
+  }
+
+  .sub-con {
+    flex-wrap: nowrap;
+  }
+
+  .sub-form-label {
+    margin: 0;
+  }
+  /* #endregion media footer */
 }
 /* #endregion media */
