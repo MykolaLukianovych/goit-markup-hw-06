@@ -1070,10 +1070,10 @@ img {
   /* #region media footer */
   .footer-con {
     align-items: baseline;
+    width: 584px;
   }
 
   .logo-container {
-    margin-left: 108px;
     margin-right: 24px;
     max-width: 264px;
     text-align: start;
@@ -1086,7 +1086,6 @@ img {
   .subscribe-wrapper {
     flex-direction: column;
     align-items: start;
-    margin-left: 108px;
   }
 
   .sub-con {
