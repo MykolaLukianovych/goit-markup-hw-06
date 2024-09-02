@@ -1070,7 +1070,12 @@ img {
   /* #region media footer */
   .footer-con {
     align-items: baseline;
-    width: 584px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1157px) {
+    .footer-con {
+      width: 584px;
+    }
   }
 
   .logo-container {
